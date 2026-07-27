@@ -1,7 +1,7 @@
 ## Sample Results
 
 ### Original Color Images
-![Original Color Images](./results/original-color-images.png)
+![Original Color Images](./results/original-color-images.png) 
 
 These are sample color images from the CIFAR-10 dataset. The selected classes for this lab were cats, dogs, and ships.
 
