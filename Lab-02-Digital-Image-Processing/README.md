@@ -15,7 +15,6 @@ This result shows the image after it was converted from color to grayscale. The 
 
 This comparison shows how changing brightness makes an image lighter or darker. Changing contrast increases or decreases the difference between light and dark areas.
 
-### Filters and Edge Detection
 ![Filters and Edge Detection](./results/filters-edge-detection.png)
 
 This result shows blurring, sharpening, and edge detection. The edge filters identify areas where pixel values change quickly.
