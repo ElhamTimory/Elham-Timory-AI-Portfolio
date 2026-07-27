@@ -43,7 +43,7 @@ A deep learning image-classification project that identifies healthy and disease
 - Macro F1 score: 97.73%
 - Dataset: PlantVillage
 - Skills demonstrated: image preprocessing, transfer learning, multiclass classification, model evaluation, and confusion-matrix analysis
-- View Project
+- [View Lab 02](./Lab-02-Digital-Image-Processing)
 
 ## Lab 02 - Digital Image Processing
 This lab showed how computers represent images using pixels and color values. I learned how RGB channels work and how changing pixel values can change an image. 
