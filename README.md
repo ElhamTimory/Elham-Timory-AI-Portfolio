@@ -98,10 +98,6 @@ This lab showed that vision-language models can be useful, but they can also mak
 - Skills: Image descriptions, visual questions, prompt writing, alt text,, chart reading, and hallucination testing
 - View Lab 08
 
-## Lab 09 - Applied Computer Vision and Model Evaluation
-This lab brought together different ideas from the course. I prepared image input, ran a computer vision model, reviewed the results, and decided whether the prediciton was reasonable.
-I also learned that image quality, lighting, background objects, and unclear features can affect model performance. This lab showed why model results should always be checked carefully.
-
 - Technologies: Python, Google Colab, Jupyter Notebook, and computer vision libraries
 - Skills: Image preprocessing, model testing, result analysis, error analysis, and responsible AI
 
