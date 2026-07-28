@@ -105,6 +105,22 @@ This lab showed that vision-language models can be useful, but they can also mak
 - Technologies: Python, Google Colab, Jupyter Notebook, and computer vision libraries
 - Skills: Image preprocessing, model testing, result analysis, error analysis, and responsible AI
 
+# Machine Learning – ITAI 1371
+
+This course focused on preparing data, training machine learning models, evaluating results, and finding patterns in datasets.
+
+## Featured Projects
+
+### DeepShelf Book Recommendation
+
+This project used classification models to predict whether a user might like a book based on ratings and book information.
+
+### Student Segmentation
+
+This project used K-Means clustering to group students based on academic performance, study habits, and other information.
+
+[View My ITAI 1371 Machine Learning Repository](https://github.com/ElhamTimory/ITAI_ML_FirstRepo_Elham)
+
 ## What I Learned
 Through these labs, I leanred that computer vision includes many different tasks. It can be used to process images, classify objects, detect objects, create segmentation masks, and generate written descriptions of images.
 I also learned that accuracy is not the only way to evaluate a model. Precision, recall, F1 score, confusion matrices, confidence scores, and failure cases can give more information about how well a model performs.
