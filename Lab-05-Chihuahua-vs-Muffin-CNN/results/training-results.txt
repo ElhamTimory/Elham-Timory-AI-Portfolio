@@ -1,0 +1,28 @@
+Epoch 1/4
+----------
+train: 100%|██████████| 8/8 [00:00<00:00, 16.70it/s]
+train Loss: 0.0446 Acc: 0.9833
+validation: 100%|██████████| 2/2 [00:00<00:00,  8.34it/s]
+validation Loss: 0.0486 Acc: 0.9667
+
+Epoch 2/4
+----------
+train: 100%|██████████| 8/8 [00:00<00:00, 13.17it/s]
+train Loss: 0.0753 Acc: 0.9750
+validation: 100%|██████████| 2/2 [00:00<00:00,  7.09it/s]
+validation Loss: 0.0754 Acc: 0.9667
+
+Epoch 3/4
+----------
+train: 100%|██████████| 8/8 [00:00<00:00, 18.51it/s]
+train Loss: 0.0973 Acc: 0.9583
+validation: 100%|██████████| 2/2 [00:00<00:00,  6.35it/s]
+validation Loss: 0.1311 Acc: 0.9333
+
+Epoch 4/4
+----------
+train: 100%|██████████| 8/8 [00:00<00:00, 11.05it/s]
+train Loss: 0.0411 Acc: 0.9917
+validation: 100%|██████████| 2/2 [00:00<00:00,  5.60it/s]validation Loss: 0.0409 Acc: 1.0000
+
+Training complete!
