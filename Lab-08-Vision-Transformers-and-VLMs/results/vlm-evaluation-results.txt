@@ -1,0 +1,111 @@
+LAB 08 VLM EVALUATION RESULTS
+
+IMAGE INTERVIEW
+==============================
+Q: What animal is shown in the image?
+A: There is a cat in the image.
+
+Q: What color is the animal, and where is its position in the image?
+A: The animal is black and white in color, and it is on the left side of the image.
+
+Q: Does the animal look relaxed, alert, or uncomfortable? Explain your reasoning by describing the animal's eyes, ears, and posture.
+A: Relaxed.
+
+DETAILED REASONING PROMPT
+==============================
+Q: You are a veterinary behaviorist. Describe the animal's physical state. Does it look relaxed, alert, or uncomfortable? Provide your reasoning by specifically describing its eyes, ears, and posture.
+A: The animal appears to be relaxed and alert. Its eyes are open and looking directly at the camera. The ears are upright and seem to be alert.
+
+ONE MODEL, MULTIPLE JOBS
+==============================
+Classifier: Cat.
+Counter: 1.
+Reader/Describer: 1. Cat 2. Green background 3. Cat's eye 4. Black and white 5. White 6. Black 7. Green 8. Green background.
+
+ALT-TEXT TEST
+==============================
+IMAGE 1 - WEAK PROMPT:
+The image depicts a domestic cat resting on a wooden surface, likely a dining table or countertop, against a solid green background. The cat has a black and white coat, distinguished by its distinctive patches. The black patches are primarily on the cat's ears and face, while the white patches are on its paws and the lower part of its body. The cat's eyes are a bright green color, which makes it stand out prominently against the green background.
+
+The cat’s expression seems calm and relaxed, as it is resting its head on its paws. The paws are white with a little bit of black on the pads, which adds to the cat's unique appearance. The cat is positioned in such a way that its front paws are placed
+
+IMAGE 1 - PROFESSIONAL PROMPT:
+The cat is looking at the camera with a curious expression.
+
+IMAGE 2 - WEAK PROMPT:
+The image depicts a cartoon-style illustration of two anthropomorphic animals, likely rabbits, hugging each other. The rabbit on the left is orange with a light brown muzzle and ears, while the rabbit on the right is grayish with a white muzzle and ears. Both rabbits have expressive eyes and are smiling. The orange rabbit has a more defined and exaggerated expression, while the grayish rabbit has a more subdued, friendly look.
+
+The background of the image is a soft, warm pink color that enhances the overall vibrancy of the scene. The animals are positioned close to each other, with the orange rabbit on the left slightly in the background and the grayish rabbit on the right slightly closer to the viewer.
+
+There are no additional
+
+IMAGE 2 - PROFESSIONAL PROMPT:
+On the left, a red fox is smiling with his head tilted a little to his right. On the right, a gray and white rabbit is smiling with his head tilted a little to the left.
+
+CHART-READING TEST
+==============================
+QUESTION 1: Which month had the highest sales? Answer with only the month abbreviation.
+MODEL ANSWER: Jun
+TRUE ANSWER: Jun
+
+QUESTION 2: How many units were sold in March? Answer with only the number.
+MODEL ANSWER: 140.
+TRUE ANSWER: 140
+
+QUESTION 3: How many more units were sold in June than in February? Answer with only the number.
+MODEL ANSWER: 71.
+TRUE ANSWER: 115
+
+HALLUCINATION TEST
+==============================
+TRAP 1 - CAT IMAGE
+Q: What color is the umbrella next to the main subject?
+A: There is no umbrella present in the image.
+
+TRAP 1 - CHART IMAGE
+Q: What color is the umbrella next to the main subject?
+A: No umbrella is present next to the main subject.
+
+TRAP 2 - CAT IMAGE
+Q: What time is shown on the digital clock in the upper-right corner?
+A: There is no digital clock present in the image.
+
+TRAP 2 - CHART IMAGE
+Q: What time is shown on the digital clock in the upper-right corner?
+A: Jun.
+
+AGENT DECISION PREVIEW
+==============================
+SITUATION: There is a cat looking at the camera. ACTION: Monitor and see if the cat is interested in the camera.
+
+DEPLOYMENT AUDIT
+==============================
+WORKPLACE SCENARIO:
+Accessibility: generating alt text for a community organization's image library.
+
+MAIN ALT-TEXT TEST
+==================================================
+
+ Image 1 - Cat photograph
+PROMPT: Write one complete sentence of concise accessibility alt text for a screen-reader user. Identify the main subject, appearance, action, and important background details. Describe only what is visible and do not begin with 'an image of.'
+MODEL ANSWER: A black and white cat is resting its head on a wooden surface.
+
+ Image 2 - Cartoon illustration
+PROMPT: Write one complete sentence of concise accessibility alt text for a screen-reader user. Identify the main subject, appearance, action, and important background details. Describe only what is visible and do not begin with 'an image of.'
+MODEL ANSWER: Rabbit and Fox. Rabbit is smiling and fox is smiling.
+
+
+RELIABILITY TEST ON IMAGE 2
+==================================================
+
+PHRASING 1
+PROMPT: Write one complete sentence of concise accessibility alt text for this image. Mention the main subjects, their expressions, and the background. Describe only what is visible.
+MODEL ANSWER: Mention the main subjects, their expressions, and the background. Describe only what is visible.
+
+PHRASING 2
+PROMPT: Describe this image for a person using a screen reader. Use one short but complete sentence and include the main characters, their actions or expressions, and the background.
+MODEL ANSWER: Describe the image for a person using a screen reader.
+
+PHRASING 3
+PROMPT: Create one-sentence alt text for this image. Be accurate and concise, identify the main subjects and visible setting, and do not add details that cannot be seen.
+MODEL ANSWER: An animated image of two animals, a fox and a rabbit, smiling together.
