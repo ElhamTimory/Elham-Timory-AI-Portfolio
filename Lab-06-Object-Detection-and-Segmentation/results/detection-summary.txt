@@ -1,0 +1,9 @@
+DETECTED OBJECTS
+==================================================
+  bus             confidence: 94.02%    box: (3, 229) to (796, 728)
+  person          confidence: 88.82%    box: (671, 394) to (809, 878)
+  person          confidence: 87.83%    box: (47, 399) to (239, 904)
+  person          confidence: 85.58%    box: (223, 408) to (344, 860)
+  person          confidence: 62.19%    box: (0, 556) to (68, 872)
+
+Total objects detected: 5
