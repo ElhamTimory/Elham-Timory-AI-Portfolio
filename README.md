@@ -80,7 +80,7 @@ I also learned about transfer learning. Transfer learning allows us to use a mod
 - Skills: CNNs, convolutional layers, pooling, feature extraction, and transfer learning
 - View Lab 05
 
-Lab 06 - Object Detection and Image Segmentation 
+## Lab 06 – Object Detection and Image Segmentation 
 This lab focused on object detection and image segmentation. I used YOLO 11 to detect objects and draw bounding boxes around them.
 I also used YOLO 11-seg and SAM 2 to create segmentation masks. These masks show the exact parts of an image that belong to an object.
 The lab also explained confidence scores, Intersection over Union, precision, recall, and mean Average Precision. 
