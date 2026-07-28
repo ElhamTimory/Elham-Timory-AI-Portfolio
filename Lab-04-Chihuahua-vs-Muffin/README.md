@@ -67,12 +67,5 @@ These are examples of Chihuahua and muffin images from the training dataset. The
 
 This image shows the model’s predictions on the validation dataset. The percentages show how confident the model was that each image was a Chihuahua or a muffin.
 
-### Training and Validation Accuracy
-![Training and Validation Accuracy](./results/training-validation-accuracy.png)
-
-The accuracy improved as the model trained. The final training accuracy was 95%, and the final validation accuracy was 96.67%.
-
-### Training and Validation Loss
-![Training and Validation Loss](./results/training-validation-loss.png)
 
 The training and validation loss generally decreased over the 10 epochs. This shows that the model improved its predictions during training.
