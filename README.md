@@ -42,8 +42,8 @@ A deep learning image-classification project that identifies healthy and disease
 - Test accuracy: 97.71%
 - Macro F1 score: 97.73%
 - Dataset: PlantVillage
-- Skills demonstrated: image preprocessing, transfer learning, multiclass classification, model evaluation, and confusion-matrix analysis
-- [View Lab 02](./Lab-02-Digital-Image-Processing)
+- Skills: image preprocessing, transfer learning, multiclass classification, model evaluation, and confusion-matrix analysis
+- [View the Complete Plant Disease Classification Project](https://github.com/TobiasC05/ITAI1378_PlantDiseaseClassificaiton_PDC)
 
 ## Lab 02 - Digital Image Processing
 This lab showed how computers represent images using pixels and color values. I learned how RGB channels work and how changing pixel values can change an image. 
@@ -72,7 +72,7 @@ I prepared the dataset, built the model, trained it, and tested its performance.
 
 
 
-## Lab 05 - Convolutional Neural Networks and Transfer Learning
+## Lab 05 – Chihuahua vs. Muffin CNN
 This lab focused on convolutional neural networks and image recognition. I learned how CNNs use filters to find important image features such as edges, shapes, colors, and textures.
 I also learned about transfer learning. Transfer learning allows us to use a model that was already trained on a large dataset and adjust it for a new task. 
 
