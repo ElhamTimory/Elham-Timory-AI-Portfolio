@@ -22,7 +22,7 @@ The model was trained using different settings, including Adam and SGD optimizer
 
 The best model reached:
 
-- **Best validation accuracy:** 100%
+- **Best validation accuracy:** 96.67%
 - **Task:** Binary image classification
 - **Classes:** Chihuahua and Muffin
 
