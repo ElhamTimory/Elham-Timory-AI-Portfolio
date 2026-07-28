@@ -28,29 +28,8 @@ The best model reached:
 
 The results showed that changing the optimizer, batch size, and number of epochs affected the model’s performance.
 
-## Technologies Used
-
-- Python
-- PyTorch
-- Torchvision
-- Pillow
-- NumPy
-- Matplotlib
-- Google Colab
-- Jupyter Notebook
-
-## Skills Learned
-
-- Image preprocessing
-- Binary image classification
-- Neural network development
-- Training and validation
-- Batch size and epochs
-- Adam and SGD optimizers
-- Accuracy and loss evaluation
-- Overfitting analysis
-
-## How to Run
+- **Technologies:** Python, PyTorch, Torchvision, Pillow, and Matplotlib
+- **Skills:** Image preprocessing, neural network training, validation, optimizer comparison, and binary classification## How to Run
 
 Open the notebook in Google Colab or Jupyter Notebook. Run the cells from top to bottom to load the data, train the model, and view the results.
 
