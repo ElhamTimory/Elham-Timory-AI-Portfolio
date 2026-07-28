@@ -52,13 +52,15 @@ I worked with brightness, contrast, grayscale images, blurring, sharpening, and 
 
 - Technologies: Python, OpenCV, Pillow, NumPy, and Matplotlib
 - Skills: Pixel, RGB channels, brightness, contrast, filters, and image visualization
-- View Lab 02
+- [View Lab 02](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-02-Digital-Image-Processing)
+
 
 ## Lab 03 - Image Classification with Support Vector Machines
 This lab used a Support Vector Machine to classify images from selected CIFAR-10 categories. Different kernels were compared to understand how model settings affect classification performance.
 - Technologies: Python and Scikit-learn
 - Skills: image classification, feature preparation, SVM kernels, accuracy, precision, recall, and F1 score
-- View Lab 03
+- [View Lab 03](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-03-SVM-Image-Classification)
+
 
 
 ## Lab 04 - Chihuahua vs. Muffin Neural Nerwork
@@ -68,7 +70,8 @@ I prepared the dataset, built the model, trained it, and tested its performance.
 - Best validation accuracy: 100%
 - Technologies: Python, Scikit-learn, NumPy, and Matplotlib
 - Skills: Image classification, SVM kernels, feature preparation, and model evaluation
-- View Lab 04
+- [View Lab 04](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-04-Chihuahua-vs-Muffin)
+
 
 
 
@@ -78,7 +81,8 @@ I also learned about transfer learning. Transfer learning allows us to use a mod
 
 - Techonologies: Python, PyTorch, Torchvision, and Matplotlib
 - Skills: CNNs, convolutional layers, pooling, feature extraction, and transfer learning
-- View Lab 05
+- [View Lab 05](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-05-Chihuahua-vs-Muffin-CNN)
+
 
 ## Lab 06 – Object Detection and Image Segmentation 
 This lab focused on object detection and image segmentation. I used YOLO 11 to detect objects and draw bounding boxes around them.
@@ -88,7 +92,7 @@ The lab also explained confidence scores, Intersection over Union, precision, re
 - Models: YOLO11, YOLO11-seg, and SAM 2
 - Technologies: Python, Ultralytics YOLO, OpenCV, and Matplotlib
 - Skills: Object detection, bounding boxes, segmentation masks, confidence scores, IoU precision, recall, and mAP
-- View Lab 06
+- [View Lab 06](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-06-Object-Detection-and-Segmentation)
 
 ## Lab 08 - Vision Language Models
 This lab introduced vision-language models. These models can understand both images and written prompts. 
@@ -96,7 +100,7 @@ I used a vision-language model to describe images, count objects, identify items
 This lab showed that vision-language models can be useful, but they can also make mistakes or give incorrect information. 
 - Technologies: Python, Hugging Face Transformers, and SmolVLM
 - Skills: Image descriptions, visual questions, prompt writing, alt text,, chart reading, and hallucination testing
-- View Lab 08
+- [View Lab 08](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-08-Vision-Transformers-and-VLMs)
 
 - Technologies: Python, Google Colab, Jupyter Notebook, and computer vision libraries
 - Skills: Image preprocessing, model testing, result analysis, error analysis, and responsible AI
