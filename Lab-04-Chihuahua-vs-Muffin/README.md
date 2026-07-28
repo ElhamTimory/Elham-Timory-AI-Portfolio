@@ -54,6 +54,25 @@ The results showed that changing the optimizer, batch size, and number of epochs
 
 Open the notebook in Google Colab or Jupyter Notebook. Run the cells from top to bottom to load the data, train the model, and view the results.
 
+
 ## Sample Results
 
-The `results` folder contains the main graphs, predictions, and model results from the lab.
+### Sample Training Images
+![Sample Training Images](./results/sample-training-images.png)
+
+These are examples of Chihuahua and muffin images from the training dataset. The two classes can sometimes look similar because of their colors, shapes, and textures.
+
+### Validation Predictions
+![Validation Predictions](./results/validation-predictions.png)
+
+This image shows the model’s predictions on the validation dataset. The percentages show how confident the model was that each image was a Chihuahua or a muffin.
+
+### Training and Validation Accuracy
+![Training and Validation Accuracy](./results/training-validation-accuracy.png)
+
+The accuracy improved as the model trained. The final training accuracy was 95%, and the final validation accuracy was 96.67%.
+
+### Training and Validation Loss
+![Training and Validation Loss](./results/training-validation-loss.png)
+
+The training and validation loss generally decreased over the 10 epochs. This shows that the model improved its predictions during training.
