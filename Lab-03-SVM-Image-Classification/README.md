@@ -45,4 +45,26 @@ Open the notebook in Google Colab or Jupyter Notebook. Run the cells from top to
 
 ## Sample Results
 
-The `results` folder contains examples of the dataset and the main model evaluation results.
+### Original CIFAR-10 Images
+
+![Original Color Images](./results/original-color-images.png)
+
+These are sample cat, dog, and ship images before preprocessing.
+
+### Grayscale Images
+
+![Grayscale Images](./results/grayscale-images.png)
+
+These images show the selected CIFAR-10 classes after grayscale conversion.
+
+### SVM Predictions
+
+![SVM Sample Predictions](./results/svm-sample-predictions.png)
+
+This result compares the predicted class with the correct class for several test images.
+
+### Model Comparison
+
+![SVM Model Comparison](./results/svm-model-comparison.png)
+
+This chart compares the performance of the Linear SVM and RBF SVM models.
