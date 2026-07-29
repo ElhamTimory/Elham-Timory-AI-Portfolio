@@ -108,3 +108,45 @@ The main installation is:
 
 ```python
 pip install ultralytics
+
+## Sample Results
+
+### YOLO11 Object Detection
+
+![YOLO11 Object Detection](./results/yolo11-object-detection.png)
+
+This result shows bounding boxes, object labels, and confidence scores produced by YOLO11.
+
+### Confidence Threshold Comparison
+
+![Confidence Threshold Comparison](./results/confidence-threshold-comparison.png)
+
+This comparison shows how changing the confidence threshold affects the number of accepted detections.
+
+### YOLO11 Instance Segmentation
+
+![YOLO11 Instance Segmentation](./results/yolo11-instance-segmentation.png)
+
+This image shows separate pixel-level masks for the detected objects.
+
+### Detection and Segmentation Comparison
+
+![Detection and Segmentation Comparison](./results/detection-vs-segmentation.png)
+
+This comparison shows the difference between bounding-box detection and pixel-level segmentation.
+
+### YOLO11 and SAM 2
+
+![YOLO11 and SAM 2](./results/sam2-detect-then-segment.png)
+
+This result shows the detect-then-segment workflow. YOLO11 first located the objects, and SAM 2 created detailed masks.
+
+### Intersection over Union
+
+![IoU Overlap Examples](./results/iou-overlap-examples.png)
+
+This image shows how different levels of overlap affect the Intersection over Union score.
+
+## Additional Result Files
+
+- `detection-summary.txt` – Printed detection information from the notebook
