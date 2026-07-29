@@ -2,48 +2,46 @@
 
 ## Problem Statement
 
-The purpose of this lab was to understand how computers represent and process digital images. The lab explored how changing pixel values can affect the appearance of an image.
+The purpose of this lab was to understand how computers store and process digital images. An image may look simple to us, but a computer sees it as a group of numerical pixel values.
 
-The main goal was to apply basic image-processing operations such as grayscale conversion, brightness adjustment, contrast adjustment, filtering, and edge detection.
+In this lab, I explored how changing those pixel values affects the way an image looks. I worked with grayscale conversion, brightness, contrast, filters, and edge detection.
 
 ## Approach
 
-I loaded a color image and examined how it was represented using red, green, and blue pixel values.
+I started by loading a color image and looking at how its red, green, and blue values were represented.
 
 I then applied several image-processing techniques:
 
-- Converted the RGB image to grayscale
+- Converted the original image to grayscale
 - Increased and decreased brightness
-- Adjusted image contrast
+- Adjusted the contrast
 - Applied blur and sharpening filters
-- Used edge detection to locate areas where pixel values changed quickly
-- Compared the original image with the processed versions
+- Used edge detection
+- Compared the original image with the processed images
 
-The results were displayed using Matplotlib.
+The results were displayed using Matplotlib so the effects of each operation could be seen clearly.
 
 ## Dataset
 
-This lab did not use a large dataset. It used sample images for image-processing experiments.
+This lab did not use a large dataset. It used sample images for testing different image-processing operations.
 
-The images were loaded in the notebook and processed directly using Python libraries. No public dataset was uploaded to this repository.
+The images were loaded and processed directly inside the notebook. No public dataset was uploaded to this repository.
 
 ## Results
 
-The grayscale conversion removed the color information while keeping the shapes and brightness levels of the image.
+The grayscale conversion removed the color information while keeping the main shapes and brightness levels in the image.
 
-Changing the brightness made the image lighter or darker by modifying pixel values. Contrast adjustment changed the difference between the light and dark areas.
+Increasing the pixel values made the image brighter, while decreasing them made the image darker. Adjusting contrast changed the difference between the lighter and darker parts of the image.
 
-The blur filter reduced image details, while the sharpening filter made edges and features more visible. Edge detection identified areas where the pixel values changed quickly.
+The blur filter reduced small details, while the sharpening filter made some edges and features more noticeable. Edge detection highlighted areas where the pixel values changed quickly.
 
-This lab did not train a machine-learning model, so there were no accuracy, precision, recall, or loss metrics.
+This lab did not train a machine-learning model, so there were no accuracy or loss scores.
 
 ## Key Findings
 
-I learned that digital images are made of numerical pixel values.
+This lab helped me understand that image-processing effects are created by changing pixel values in specific ways.
 
-Changing these values can change the brightness, contrast, color, and details of an image. I also learned that image filters use mathematical operations to create visual effects such as blur, sharpening, and edge detection.
-
-These image-processing techniques can be used as preprocessing steps before an image is given to a computer-vision model.
+I also learned that filters are useful for preparing images before they are used in a computer-vision model. For example, edge detection can highlight important shapes, while blur can reduce noise.
 
 ## Technologies and Dependencies
 
@@ -52,17 +50,17 @@ This lab used:
 - Python
 - NumPy
 - Pillow
-- Matplotlib
 - OpenCV
+- Matplotlib
 - Google Colab
 - Jupyter Notebook
 
 ## How to Run
 
-1. Open the `.ipynb` notebook in this folder using Google Colab or Jupyter Notebook.
+1. Open the `.ipynb` notebook in Google Colab or Jupyter Notebook.
 2. Run the cells from top to bottom.
-3. Make sure the required image files are available to the notebook.
-4. View the processed images and comparisons in the output cells.
+3. Make sure the required image is available to the notebook.
+4. View the processed images in the output cells.
 
 ## Sample Results
 
@@ -70,14 +68,19 @@ This lab used:
 
 ![Original RGB Image](./results/rgb-color-image.png)
 
-This image shows the original color image before processing.
+This is the original color image before any processing was applied.
 
 ### Grayscale Conversion
 
 ![Grayscale Conversion](./results/grayscale-conversion.png)
 
-This result shows the image after its color information was removed.
+This result shows the image after the color information was removed.
 
+### Brightness and Contrast Comparison
+
+![Brightness and Contrast Comparison](./results/brightness-contrast-comparison.png)
+
+This comparison shows how changing pixel values affects brightness and contrast.
 
 ### Filters and Edge Detection
 
@@ -89,4 +92,4 @@ This image shows the results of blur, sharpening, and edge-detection filters.
 
 ![Image-Processing Effects](./results/image-processing-effects.png)
 
-This comparison summarizes several image-processing operations completed during the lab.
+This comparison summarizes several of the image-processing operations completed in the lab.
