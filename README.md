@@ -63,11 +63,11 @@ This lab used a Support Vector Machine to classify images from selected CIFAR-10
 
 
 
-## Lab 04 - Chihuahua vs. Muffin Neural Nerwork
-This lab used a neural network to classify images as either a Chihuahua or a muffin. These images can sometimes look very similar because they may hace similar colors, shapes, and textures. 
+## Lab 04 - Chihuahua vs. Muffin Neural Network
+This lab used a neural network to classify images as either a Chihuahua or a muffin. These images can sometimes look very similar because they may have similar colors, shapes, and textures. 
 I prepared the dataset, built the model, trained it, and tested its performance. I also changed settings such as batch size, epoches, optimizer, and learning rate to see how they affected the results. 
 
-- Best validation accuracy: 100%
+- Best validation accuracy: 96.67%
 - Technologies: Python, Scikit-learn, NumPy, and Matplotlib
 - Skills: Image classification, SVM kernels, feature preparation, and model evaluation
 - [View Lab 04](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-04-Chihuahua-vs-Muffin)
@@ -79,7 +79,7 @@ I prepared the dataset, built the model, trained it, and tested its performance.
 This lab focused on convolutional neural networks and image recognition. I learned how CNNs use filters to find important image features such as edges, shapes, colors, and textures.
 I also learned about transfer learning. Transfer learning allows us to use a model that was already trained on a large dataset and adjust it for a new task. 
 
-- Techonologies: Python, PyTorch, Torchvision, and Matplotlib
+- Technologies: Python, PyTorch, Torchvision, and Matplotlib
 - Skills: CNNs, convolutional layers, pooling, feature extraction, and transfer learning
 - [View Lab 05](https://github.com/ElhamTimory/Elham-Timory-AI-Portfolio/tree/main/Lab-05-Chihuahua-vs-Muffin-CNN)
 
