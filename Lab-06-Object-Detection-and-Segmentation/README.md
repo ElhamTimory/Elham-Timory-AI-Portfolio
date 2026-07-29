@@ -1,85 +1,110 @@
-# Lab 06 - Object Detection and Image Segmentation
+# Lab 06 – Object Detection and Image Segmentation
 
-## Overview
-This lab focused on object detection and image segmentation. I used YOLO11 to detect and draw bounding boxes around them.
-I also used YOLO11-seg to create masks around detected objects. SAM 2 was used with bounding boxes to create more detailed segmentation masks.
+## Problem Statement
 
-## Models Used
-- YOLO11n for object detection
-- YOLO11n-seg for instance segmentaion
-- SAM 2 for foundation-model segmentation
+The purpose of this lab was to understand the differences between image classification, object detection, and image segmentation.
 
-## Images Used
-The lab used sample images provided by Ultralytics, including a bus image and a soccer image.
-The image were loaded through the notebook and are not included as a separate dataset in this repository.
+Instead of predicting only one label for an entire image, the models needed to locate individual objects and identify the pixels belonging to each object.
+
+The lab also compared a specialist model, YOLO11, with a foundation segmentation model, SAM 2.
+
+## Approach
+
+YOLO11 was used for object detection.
+
+The model placed bounding boxes around detected objects and provided:
+
+- Class labels
+- Confidence scores
+- Bounding-box coordinates
+
+Different confidence thresholds were tested to observe how the threshold affected the number of detections.
+
+YOLO11-seg was then used for instance segmentation. It produced a separate pixel-level mask for each detected object.
+
+SAM 2 was also tested using bounding boxes as prompts. This created a detect-then-segment workflow:
+
+1. YOLO11 detected and labeled the objects.
+2. SAM 2 used the bounding boxes to create detailed masks.
+
+The lab also included examples explaining Intersection over Union, precision, recall, and mean Average Precision.
+
+## Dataset
+
+This lab did not train a new model or use a separate training dataset.
+
+It used sample images provided by Ultralytics, including:
+
+- `bus.jpg`
+- `zidane.jpg`
+
+The images were downloaded automatically through the notebook.
+
+Image and model source:
+
+[Ultralytics](https://ultralytics.com/)
+
+The models used were pretrained:
+
+- YOLO11n
+- YOLO11n-seg
+- SAM 2.1 Small
+
+The model weight files and public sample images were not uploaded separately to this repository.
 
 ## Results
-YOLO11 detected a bus and four people in the sample bus image. ON the second image, it detected two people and a tie.
-YOLO11-seg created six masks for the bus image. The masks showed the exact areas belonging to the bus, people, and other detected objects.
-The confidence-threshold experiement showed that a lower threshold produces more detections, while a higher threshold keeps only predictions with stronger confidence. 
-SAM 2 used the bounding boxes from YOLO11 as prompts and created detailed segmentation masks.
-This lab did not train a new model, so there is no training or validation accuracy to report. 
 
-## Technologies Used
+On the bus image, YOLO11 detected:
+
+- Four people
+- One bus
+- One stop sign
+
+YOLO11-seg produced six object masks for the bus image.
+
+On the Zidane image, YOLO11-seg detected:
+
+- Two people
+- One tie
+
+It produced three segmentation masks.
+
+The confidence-threshold comparison showed that:
+
+- Lower thresholds accepted more detections
+- Higher thresholds removed weaker detections
+- Very high thresholds could miss valid objects
+
+SAM 2 created detailed masks after receiving YOLO bounding boxes as prompts.
+
+This lab used pretrained models and did not train a new model. Therefore, it did not produce training accuracy, validation loss, or training curves.
+
+## Key Findings
+
+I learned that image classification predicts a label for the entire image, while object detection locates objects with bounding boxes.
+
+Instance segmentation gives more detail by identifying the pixels belonging to each object.
+
+YOLO is useful when the model needs to find objects and name their classes. SAM 2 can segment almost any object when it receives a prompt, but it does not automatically provide the object’s class name.
+
+I also learned that confidence thresholds involve a tradeoff. A lower threshold may detect more objects but can increase false positives. A higher threshold may reduce false positives but can miss real objects.
+
+## Technologies and Dependencies
+
+This lab used:
 
 - Python
-- Ultralytics YOLO
+- Ultralytics
+- YOLO11
+- YOLO11-seg
 - SAM 2
-- OpenCV
-- Pillow
 - NumPy
+- Pillow
 - Matplotlib
 - Google Colab
 - Jupyter Notebook
 
-## Skills Learned
+The main installation is:
 
-- Object detection
-- Bounding boxes
-- Confidence scores
-- Instance segmentation
-- Segmentation masks
-- Confidence thresholds
-- Intersection over Union
-- Precision and recall
-- Mean Average Precision
-- Detect-then-segment workflow
-
-
-## Sample Results
-
-### YOLO11 Object Detection
-
-![YOLO11 Object Detection](./results/yolo11-object-detection.png)
-
-This image shows the objects detected by YOLO11. The model placed bounding boxes around the bus and people and displayed a confidence score for each prediction.
-
-### Confidence Threshold Comparison
-
-![Confidence Threshold Comparison](./results/confidence-threshold-comparison.png)
-
-This comparison shows how the confidence threshold changes the number of detections. Lower thresholds accept more predictions, while higher thresholds keep only stronger predictions.
-
-### YOLO11 Instance Segmentation
-
-![YOLO11 Instance Segmentation](./results/yolo11-instance-segmentation.png)
-
-This result shows instance segmentation using YOLO11-seg. Each detected object has its own pixel-level mask.
-
-### Detection and Segmentation Comparison
-
-![Detection and Segmentation Comparison](./results/detection-vs-segmentation.png)
-
-Object detection uses bounding boxes to show the location of objects. Segmentation gives a more detailed outline by identifying the pixels that belong to each object.
-
-### YOLO11 and SAM 2
-
-![YOLO11 and SAM 2](./results/sam2-detect-then-segment.png)
-
-This image shows the detect-then-segment workflow. YOLO11 first found the objects, and SAM 2 used the bounding boxes to create segmentation masks.
-
-### Intersection over Union
-
-![Intersection over Union](./results/iou-overlap-examples.png)
-
-This image shows different levels of overlap between the correct bounding box and the model’s predicted box. A higher IoU means the predicted box matches the correct box more closely.
+```python
+pip install ultralytics
