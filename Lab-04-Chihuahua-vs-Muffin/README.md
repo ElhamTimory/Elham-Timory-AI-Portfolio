@@ -4,77 +4,72 @@
 
 The purpose of this lab was to build a neural network that could classify an image as either a Chihuahua or a muffin.
 
-These two classes can look surprisingly similar because both may contain similar colors, textures, shapes, and patterns.
-
-The model needed to learn the visual differences between the two classes and make predictions on validation images.
+This is a challenging image-classification problem because some Chihuahuas and muffins can have similar colors, textures, and shapes.
 
 ## Approach
 
 The images were resized to 224 by 224 pixels and converted into PyTorch tensors.
 
-A traditional fully connected neural network was created using PyTorch. The image pixels were flattened into one long vector before being sent through the network.
+Before the images entered the neural network, their pixels were flattened into one long numerical vector.
 
-The model included:
+The network included:
 
-- An input layer with 150,528 pixel values
-- A hidden layer with 128 features
-- A hidden layer with 64 features
-- A hidden layer with 32 features
+- An input layer
+- Three hidden layers
+- ReLU activation functions
 - An output layer with two class scores
 
-ReLU activation was used between the hidden layers.
+The model was trained using cross-entropy loss and the SGD optimizer.
 
-The model was trained using:
+The training settings included:
 
-- Cross-entropy loss
-- SGD optimizer
-- Learning rate of 0.01
-- Batch size of 32
-- 10 epochs
+- Learning rate: 0.01
+- Batch size: 32
+- Number of epochs: 10
 
-The model was evaluated on a separate validation set after each epoch.
+The model was evaluated on the validation set after each epoch.
 
 ## Dataset
 
-This lab used the Chihuahua vs. Muffin image dataset from the workshop repository.
-
-The notebook downloads the dataset by cloning the original GitHub repository.
+This lab used the Chihuahua vs. Muffin image dataset from a public workshop repository.
 
 Dataset source:
 
 [Chihuahua vs. Muffin Workshop Dataset](https://github.com/patitimoner/workshop-chihuahua-vs-muffin)
 
+The notebook downloaded the data by cloning the original repository.
+
 The dataset contains separate folders for:
 
-- Training images
-- Validation images
-- Chihuahua images
-- Muffin images
+- Chihuahua training images
+- Muffin training images
+- Chihuahua validation images
+- Muffin validation images
 
-The public dataset is not stored again in this portfolio repository.
+The dataset was not uploaded again to this portfolio repository.
 
 ## Results
 
-The final training run achieved:
+In the final saved run, the model reached approximately:
 
-- Final training accuracy: 95.00%
-- Final validation accuracy: 96.67%
-- Final training loss: 0.2698
-- Final validation loss: 0.3297
+- Training accuracy: 95.00%
+- Validation accuracy: 96.67%
+- Training loss: 0.2698
+- Validation loss: 0.3297
 
-The validation accuracy improved during training and reached 96.67% during the final epoch.
+The model correctly classified most of the validation images.
 
-The model correctly classified most validation images, although the task remained difficult because some muffins and Chihuahuas had similar textures and shapes.
+However, some images remained difficult because certain muffins and Chihuahuas had similar visual features.
 
 ## Key Findings
 
-I learned that a basic neural network can classify images after the pixels are resized, normalized, and flattened.
+This lab helped me understand how a basic neural network can be used for image classification.
 
-However, flattening the image removes information about where features are located. The model sees the pixels as one long list rather than understanding nearby shapes and patterns.
+I learned that images must be resized, normalized, and converted into numerical values before entering the model.
 
-I also learned that the optimizer, learning rate, batch size, and number of epochs can affect training performance.
+I also learned that flattening an image removes information about where features are located. The network sees one long list of pixels instead of understanding nearby shapes and patterns.
 
-This lab helped prepare for the next lab, where a convolutional neural network was used to preserve and learn spatial image features.
+This limitation prepared me for the next lab, where I used a convolutional neural network.
 
 ## Technologies and Dependencies
 
@@ -89,7 +84,7 @@ This lab used:
 - Google Colab
 - Jupyter Notebook
 
-The main PyTorch components included:
+Important components included:
 
 - `torch.nn`
 - `torch.optim`
@@ -101,13 +96,12 @@ The main PyTorch components included:
 
 1. Open `L04_Elham_Timory_ITAI1378.ipynb` in Google Colab.
 2. Run the cells from top to bottom.
-3. The notebook will clone the public dataset repository.
-4. Allow the notebook to load and preprocess the images.
-5. Run the training cell for all 10 epochs.
-6. Review the training and validation results.
-7. View the sample predictions at the end of the notebook.
+3. Allow the notebook to download the image dataset.
+4. Run the model-training cell.
+5. Review the training and validation results.
+6. View the sample predictions at the end of the notebook.
 
-A GPU can be used, but the notebook can also run on a CPU.
+The notebook can run on a CPU, although a GPU may make training faster.
 
 ## Sample Results
 
@@ -121,4 +115,4 @@ These are examples of Chihuahua and muffin images used during training.
 
 ![Validation Predictions](./results/validation-predictions.png)
 
-This result shows the model’s predictions for selected validation images.
+This result shows validation images with their predicted and correct labels.
