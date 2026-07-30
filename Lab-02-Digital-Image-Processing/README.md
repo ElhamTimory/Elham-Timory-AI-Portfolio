@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-The purpose of this lab was to understand how computers store and process digital images. An image may look simple to us, but a computer sees it as a group of numerical pixel values.
+This lab was about understanding how computers store and process digital images. An image may look simple to us, but a computer sees it as a group of numerical pixel values.
 
 In this lab, I explored how changing those pixel values affects the way an image looks. I worked with grayscale conversion, brightness, contrast, filters, and edge detection.
 
