@@ -109,6 +109,8 @@ The main installation is:
 ```python
 pip install ultralytics
 
+
+
 ## Sample Results
 
 ### YOLO11 Object Detection
