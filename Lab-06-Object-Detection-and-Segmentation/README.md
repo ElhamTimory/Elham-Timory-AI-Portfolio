@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-The purpose of this lab was to understand the differences between image classification, object detection, and image segmentation.
+The main goal of this lab was to understand the differences between image classification, object detection, and image segmentation.
 
 Instead of predicting only one label for an entire image, the models needed to locate individual objects and identify the pixels belonging to each object.
 
@@ -10,7 +10,7 @@ The lab also compared a specialist model, YOLO11, with a foundation segmentation
 
 ## Approach
 
-YOLO11 was used for object detection.
+I used YOLO11 for object detection.
 
 The model placed bounding boxes around detected objects and provided:
 
