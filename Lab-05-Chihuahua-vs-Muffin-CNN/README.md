@@ -124,10 +124,6 @@ Main model components:
 1. Open `L05_Timory_Elham_ITAI1378.ipynb` in Google Colab.
 2. Run all cells from top to bottom.
 3. Allow the notebook to download and organize the image dataset.
-4. Run the model-definition and model-summary cells.
-5. Train the CNN for four epochs.
-6. Review the training and validation accuracy.
-7. Run the prediction cell to display validation predictions.
 
 A GPU is recommended but is not required for this small dataset.
 
