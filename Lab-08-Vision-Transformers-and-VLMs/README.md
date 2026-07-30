@@ -1,55 +1,96 @@
-# Lab 08 - Vision Transformers and Vision-Language Models
+# Lab 03 – SVM Image Classification
 
-## Overview
-This lab introduced Vision Transformers and vision-language models. I learned how a Vision Transformer divides an image into smaller patches before processing it. 
-I also used SmolVLM-500M-Instruct to ask questions about images, classify objects, count objects, count objects, create alt text, read a chart, and test for halluciantions.
+## Problem Statement
 
-## Model Used
-The lab used SmolVLM-500M-Instruct. This model can process both images and written prompts.
-The same model completed several tasks by changing the prompt instead of using a different model for every task. 
+The goal of this lab was to classify images as a cat, dog, or ship using a traditional machine-learning model.
+
+I also compared two Support Vector Machine models to see whether the type of kernel affected the classification results.
+
+## Approach
+
+I loaded the CIFAR-10 dataset and selected only three classes:
+
+- Cat
+- Dog
+- Ship
+
+Before training the models, I prepared the images by:
+
+- Converting them to grayscale
+- Normalizing the pixel values
+- Flattening each image into a one-dimensional feature vector
+
+I trained two models:
+
+- Linear Support Vector Machine
+- RBF Support Vector Machine
+
+The models were evaluated using accuracy and classification reports. I also displayed sample predictions to compare the predicted labels with the correct labels.
+
+## Dataset
+
+This lab used the CIFAR-10 dataset.
+
+CIFAR-10 is a public image dataset containing small color images from 10 different classes. This lab used only the cat, dog, and ship classes.
+
+The dataset was loaded directly through the notebook and was not uploaded to this repository.
+
+It can be loaded with:
+
+```python
+from tensorflow.keras.datasets import cifar10
+
+(x_train, y_train), (x_test, y_test) = cifar10.load_data()
+```
+
+Dataset source:
+
+[CIFAR-10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
 
 ## Results
 
-The 48-pixel patch grid divided the image into 64 smaller patches. This gave the model more visual detail.
+The Linear SVM achieved an accuracy of 54.7%.
 
-The 96-pixel patch grid used only 16 larger patches. It required less processing, but it could miss smaller details.
+The RBF SVM achieved an accuracy of 68.4%.
 
-The model answered two out of three chart questions correctly. It correctly identified the highest sales month and the March sales value, but it calculated the difference between June and February incorrectly.
+The RBF SVM performed better than the Linear SVM. This showed that the RBF kernel handled the image patterns better than the simpler linear decision boundary.
 
-During the hallucination test, the model correctly rejected three questions about objects that were not present. However, it answered “Jun” when asked about a digital clock that did not exist.
+## Key Findings
 
-The deployment audit showed that the model could create useful alt text, but its answers were sometimes incomplete or inconsistent. I concluded that the model should be used with human review.
+This lab showed me that the choice of kernel can affect the performance of an SVM model.
 
-## Technologies Used
+The Linear SVM used a simpler decision boundary, while the RBF SVM could work with more complex patterns in the image data.
+
+I also learned that converting images to grayscale and flattening them removes some color and spatial information. This can make image classification more difficult for traditional machine-learning models.
+
+## Technologies and Dependencies
+
+This lab used:
 
 - Python
-- PyTorch
-- Hugging Face Transformers
-- SmolVLM-500M-Instruct
-- Pillow
+- NumPy
 - Matplotlib
+- TensorFlow
+- Keras
+- Scikit-learn
 - Google Colab
 - Jupyter Notebook
 
-## Skills Learned
+Important Scikit-learn tools included:
 
-- Vision Transformers
-- Image patches
-- Vision-language models
-- Visual question answering
-- Image classification
-- Object counting
-- Accessibility alt text
-- Chart interpretation
-- Prompt writing
-- Hallucination testing
-- Model evaluation
+- `SVC`
+- `accuracy_score`
+- `classification_report`
 
 ## How to Run
 
-Open the notebook in Google Colab or Jupyter Notebook. Run the cells from top to bottom to load the model and complete the image tasks.
+1. Open `L03_Timory_Elham_ITAI1378.ipynb` in Google Colab or Jupyter Notebook.
+2. Run the cells from top to bottom.
+3. Allow the CIFAR-10 dataset to download automatically.
+4. Run the preprocessing cells to select and prepare the images.
+5. Train the Linear and RBF SVM models.
+6. Review the accuracy results, classification reports, and sample predictions.
 
-A GPU is recommended because the vision-language model requires more computing power than a basic image-processing notebook.
 
 ## Sample Results
 
