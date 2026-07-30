@@ -52,10 +52,10 @@ The dataset was not uploaded again to this portfolio repository.
 
 In the final saved run, the model reached approximately:
 
-- Training accuracy: 95.00%
+- Training accuracy: 93.33%
 - Validation accuracy: 96.67%
-- Training loss: 0.2698
-- Validation loss: 0.3297
+- Training loss: 0.2531
+- Validation loss: 0.3092
 
 The model correctly classified most of the validation images.
 
