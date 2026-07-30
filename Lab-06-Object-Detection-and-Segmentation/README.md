@@ -2,96 +2,54 @@
 
 ## Problem Statement
 
-The main goal of this lab was to understand the differences between image classification, object detection, and image segmentation.
+The purpose of this lab was to learn the difference between image classification, object detection, and image segmentation.
 
-Instead of predicting only one label for an entire image, the models needed to locate individual objects and identify the pixels belonging to each object.
-
-The lab also compared a specialist model, YOLO11, with a foundation segmentation model, SAM 2.
+I used pretrained computer-vision models to locate objects with bounding boxes and create pixel-level masks around them.
 
 ## Approach
 
-I used YOLO11 for object detection.
+I used three models:
 
-The model placed bounding boxes around detected objects and provided:
+- YOLO11 for object detection
+- YOLO11-seg for instance segmentation
+- SAM 2 for detailed segmentation masks
 
-- Class labels
-- Confidence scores
-- Bounding-box coordinates
+I also tested different confidence thresholds to see how they affected the number of detections.
 
-Different confidence thresholds were tested to observe how the threshold affected the number of detections.
+In the final activity, YOLO11 first detected the objects, and its bounding boxes were used as prompts for SAM 2.
 
-YOLO11-seg was then used for instance segmentation. It produced a separate pixel-level mask for each detected object.
+## Dataset and Images
 
-SAM 2 was also tested using bounding boxes as prompts. This created a detect-then-segment workflow:
+This lab did not use a training dataset because the models were already pretrained.
 
-1. YOLO11 detected and labeled the objects.
-2. SAM 2 used the bounding boxes to create detailed masks.
-
-The lab also included examples explaining Intersection over Union, precision, recall, and mean Average Precision.
-
-## Dataset
-
-This lab did not train a new model or use a separate training dataset.
-
-It used sample images provided by Ultralytics, including:
+The notebook used public sample images from Ultralytics:
 
 - `bus.jpg`
 - `zidane.jpg`
 
-The images were downloaded automatically through the notebook.
+The images and model files were downloaded automatically and were not uploaded separately.
 
-Image and model source:
-
-[Ultralytics](https://ultralytics.com/)
-
-The models used were pretrained:
-
-- YOLO11n
-- YOLO11n-seg
-- SAM 2.1 Small
-
-The model weight files and public sample images were not uploaded separately to this repository.
+[Ultralytics YOLO Documentation](https://docs.ultralytics.com/)
 
 ## Results
 
-On the bus image, YOLO11 detected:
+YOLO11 detected objects such as people, a bus, a stop sign, and a tie.
 
-- Four people
-- One bus
-- One stop sign
+YOLO11-seg created separate masks for the detected objects. SAM 2 also created detailed masks after receiving bounding boxes from YOLO11.
 
-YOLO11-seg produced six object masks for the bus image.
+The confidence-threshold test showed that lower thresholds keep more predictions, while higher thresholds keep only stronger predictions.
 
-On the Zidane image, YOLO11-seg detected:
-
-- Two people
-- One tie
-
-It produced three segmentation masks.
-
-The confidence-threshold comparison showed that:
-
-- Lower thresholds accepted more detections
-- Higher thresholds removed weaker detections
-- Very high thresholds could miss valid objects
-
-SAM 2 created detailed masks after receiving YOLO bounding boxes as prompts.
-
-This lab used pretrained models and did not train a new model. Therefore, it did not produce training accuracy, validation loss, or training curves.
+Since the models were pretrained, there was no training accuracy or loss curve to report.
 
 ## Key Findings
 
-I learned that image classification predicts a label for the entire image, while object detection locates objects with bounding boxes.
+I learned that object detection shows the location of an object with a bounding box, while segmentation identifies the exact pixels belonging to the object.
 
-Instance segmentation gives more detail by identifying the pixels belonging to each object.
+I also learned that confidence thresholds create a tradeoff. A low threshold may include weaker predictions, while a high threshold may miss real objects.
 
-YOLO is useful when the model needs to find objects and name their classes. SAM 2 can segment almost any object when it receives a prompt, but it does not automatically provide the object’s class name.
-
-I also learned that confidence thresholds involve a tradeoff. A lower threshold may detect more objects but can increase false positives. A higher threshold may reduce false positives but can miss real objects.
+YOLO can detect and label objects, while SAM 2 mainly creates masks from prompts.
 
 ## Technologies and Dependencies
-
-This lab used:
 
 - Python
 - Ultralytics
@@ -103,6 +61,19 @@ This lab used:
 - Matplotlib
 - Google Colab
 - Jupyter Notebook
+
+The main library can be installed with:
+
+```python
+pip install ultralytics
+```
+
+## How to Run
+
+1. Open `L06_Elham_Timory_ITAI1378.ipynb` in Google Colab.
+2. Run the cells from top to bottom.
+3. Allow the notebook to download the images and model files.
+4. Review the detection, segmentation, confidence-threshold, and SAM 2 results.
 
 
 
