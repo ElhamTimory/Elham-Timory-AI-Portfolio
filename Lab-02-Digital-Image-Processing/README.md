@@ -76,11 +76,6 @@ This is the original color image before any processing was applied.
 
 This result shows the image after the color information was removed.
 
-### Brightness and Contrast Comparison
-
-![Brightness and Contrast Comparison](./results/brightness-contrast-comparison.png)
-
-This comparison shows how changing pixel values affects brightness and contrast.
 
 ### Filters and Edge Detection
 
