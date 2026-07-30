@@ -4,7 +4,7 @@
 
 The purpose of this lab was to build a neural network that could classify an image as either a Chihuahua or a muffin.
 
-This is a challenging image-classification problem because some Chihuahuas and muffins can have similar colors, textures, and shapes.
+This is a challenging image classification problem because some Chihuahuas and muffins can have similar colors, textures, and shapes.
 
 ## Approach
 
