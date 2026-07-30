@@ -104,10 +104,6 @@ This lab used:
 - Google Colab
 - Jupyter Notebook
 
-The main installation is:
-
-```python
-pip install ultralytics
 
 
 
