@@ -10,7 +10,7 @@ In this lab, I explored how changing those pixel values affects the way an image
 
 I started by loading a color image and looking at how its red, green, and blue values were represented.
 
-I then applied several image-processing techniques:
+I then applied several image processing techniques:
 
 - Converted the original image to grayscale
 - Increased and decreased brightness
