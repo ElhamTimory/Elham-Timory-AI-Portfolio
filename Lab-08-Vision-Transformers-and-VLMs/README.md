@@ -2,9 +2,9 @@
 
 ## Problem Statement
 
-The purpose of this lab was to understand how Vision Transformers and vision-language models process images.
+The purpose of this lab was to understand how Vision Transformers and vision language models process images.
 
-The first part of the lab focused on image patches. The second part tested whether one vision-language model could complete several visual tasks by changing the written prompt.
+The first part of the lab focused on image patches. The second part tested whether one vision language model could complete several visual tasks by changing the written prompt.
 
 ## Approach
 
